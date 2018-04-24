@@ -1,0 +1,11 @@
+url Ruby Python PHP Java Node
+
+Stripe.api_key = PLATFORM_SECRET_KEY
+Stripe::Payout.create(
+  {
+    :amount => 1000,
+    :currency => "usd",
+    :method => "instant"
+  },
+  {:stripe_account => CONNECTED_STRIPE_ACCOUNT_ID}
+)
